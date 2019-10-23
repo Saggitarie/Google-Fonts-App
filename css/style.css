@@ -34,3 +34,32 @@ body {
     width: calc(2 *((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc(3 *((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
+.navigation {
+  height: 7rem;
+  padding: 2.5rem 0;
+  border-bottom: 0.5px solid rgba(102, 102, 102, 0.81); }
+  .navigation__image {
+    display: inline;
+    padding-left: 6rem; }
+    .navigation__image--size {
+      height: 2.5rem;
+      width: auto; }
+  .navigation__nav {
+    display: inline; }
+  .navigation__list {
+    text-decoration: none;
+    float: right; }
+  .navigation__item {
+    display: inline-block;
+    list-style: none;
+    padding: 0 1.5rem;
+    font-size: 120%;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .navigation__item:last-child {
+      padding-right: 6rem; }
+    .navigation__item:first-child {
+      color: #FF5F5F; }
+    .navigation__item:not(:first-child) {
+      color: rgba(102, 102, 102, 0.81); }

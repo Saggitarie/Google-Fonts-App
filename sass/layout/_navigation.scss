@@ -1,0 +1,45 @@
+.navigation {
+  height: 7rem;
+  padding: 2.5rem 0;
+  border-bottom: .5px solid $color-primary;
+
+  &__image {
+    display:inline;
+    padding-left: 6rem;
+
+    &--size {
+      height:2.5rem;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    display:inline;
+  }
+
+  &__list {
+    text-decoration: none;
+    float: right;
+  }
+
+  &__item {
+    display: inline-block;
+    list-style: none;
+    padding: 0 1.5rem;
+    font-size:120%;
+    text-transform: uppercase;
+    font-weight:bold;
+
+    &:last-child {
+      padding-right:6rem;
+    }
+
+    &:first-child {
+      color: $color-red;
+    }
+
+    &:not(:first-child){
+      color: $color-primary;
+    }
+  }
+}
