@@ -5,9 +5,9 @@ This was created to join voyage 13 in [Chingu](https://www.chingu.io/) as a prew
 
 # Features
 
-・Text typed as a custom text should immediately change the font displayed in each corresponding font cards.
-・The font size in each font cards should change according to the selection of font size chooser.
-・When 'reset' button is clicked, the page should appear as if the user reloaded the page.
+- Text typed as a custom text should immediately change the font displayed in each corresponding font cards.
+- The font size in each font cards should change according to the selection of font size chooser.
+- When 'reset' button is clicked, the page should appear as if the user reloaded the page.
 
 # Running The Project
 
