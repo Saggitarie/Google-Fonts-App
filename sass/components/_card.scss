@@ -2,6 +2,14 @@
   border-top: 1.5px solid $color-primary;
   padding:.5rem;
   height: 25rem;
+  position: relative;
+
+  &__icons {
+    color: $color-red;
+    position:absolute;
+    top:.5rem;
+    right:0;
+  }
 
   &__name {
     font-size:120%;

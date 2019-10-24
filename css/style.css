@@ -21,7 +21,13 @@ body {
 .card {
   border-top: 1.5px solid rgba(102, 102, 102, 0.81);
   padding: .5rem;
-  height: 25rem; }
+  height: 25rem;
+  position: relative; }
+  .card__icons {
+    color: #FF5F5F;
+    position: absolute;
+    top: .5rem;
+    right: 0; }
   .card__name {
     font-size: 120%; }
   .card__creator {
