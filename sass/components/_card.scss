@@ -22,8 +22,10 @@
   }
 
   &__sample-text {
-    font-size: 200%;
+    font-size: 320%;
+    height:15rem;
     margin-top: 5rem;
+    overflow: scroll;
   }
 
   &__family {

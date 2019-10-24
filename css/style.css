@@ -18,6 +18,15 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
+.u-margin-top-small {
+  margin-top: 2rem; }
+
 .card {
   border-top: 1.5px solid rgba(102, 102, 102, 0.81);
   padding: .5rem;
@@ -35,8 +44,10 @@ body {
     font-size: 110%;
     color: rgba(183, 183, 183, 0.99); }
   .card__sample-text {
-    font-size: 200%;
-    margin-top: 5rem; }
+    font-size: 320%;
+    height: 15rem;
+    margin-top: 5rem;
+    overflow: scroll; }
   .card__family--anton {
     font-family: 'Anton', sans-serif; }
   .card__family--bitter {
