@@ -155,18 +155,23 @@ body {
       width: 30%;
       outline: none;
       border-bottom: 1.2px solid #FF5F5F; }
+  .major-navigation__select {
+    width: 10%;
+    height: 90%;
+    background-color: #fff;
+    border: none; }
   .major-navigation__mode {
+    box-sizing: border-box;
     display: inline-block;
     width: 10%;
     height: 90%;
-    padding: .55rem;
     border: 1px solid rgba(232, 232, 232, 0.81); }
   .major-navigation__list {
     list-style: none; }
   .major-navigation__item {
     display: inline-block;
     margin-left: 2rem;
-    padding: 1rem;
+    cursor: pointer;
     border: 1px solid #FF5F5F;
     border-radius: 50rem; }
   .major-navigation__display-mode {
@@ -174,5 +179,14 @@ body {
     height: 90%;
     display: inline-block;
     text-align: right;
-    padding: .2rem;
     border: 1px solid rgba(232, 232, 232, 0.81); }
+  .major-navigation__reset {
+    width: 8%;
+    height: 90%;
+    display: inline-block;
+    text-align: right;
+    padding: .5rem;
+    border: 1px solid rgba(232, 232, 232, 0.81);
+    cursor: pointer;
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem; }
