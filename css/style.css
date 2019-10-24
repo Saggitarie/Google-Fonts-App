@@ -9,6 +9,15 @@ html {
 body {
   box-sizing: border-box; }
 
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem; }
+
 .row {
   max-width: 140rem;
   margin: 0 auto; }
@@ -63,3 +72,61 @@ body {
       color: #FF5F5F; }
     .minor-navigation__item:not(:first-child) {
       color: rgba(102, 102, 102, 0.81); }
+
+.major-navigation {
+  padding: 0 6rem; }
+  .major-navigation__nav {
+    padding-top: 1rem; }
+    .major-navigation__nav--block {
+      display: inline-block; }
+  .major-navigation__search-fonts {
+    width: 30%;
+    border: 0.5px solid rgba(183, 183, 183, 0.99);
+    padding: .85rem 1.5rem;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem; }
+    .major-navigation__search-fonts--search {
+      width: 100%;
+      border: none;
+      font-size: 1.5rem;
+      font-family: inherit;
+      margin-left: 3rem; }
+      .major-navigation__search-fonts--search:focus {
+        width: 90%;
+        outline: none; }
+  .major-navigation__text {
+    width: 30%;
+    border: 0.5px solid rgba(183, 183, 183, 0.99);
+    padding: .8rem 1.5rem;
+    margin-left: -.4rem; }
+    .major-navigation__text--custom {
+      width: 100%;
+      border: none;
+      font-size: 1.5rem;
+      font-family: inherit;
+      border-bottom: 1px solid rgba(232, 232, 232, 0.81);
+      transition: border-bottom .2s; }
+      .major-navigation__text--custom:focus {
+        width: 100%;
+        outline: none;
+        border-bottom: 1.2px solid #FF5F5F; }
+  .major-navigation__font-size {
+    width: 15%;
+    padding: .85rem 1.5rem;
+    border: 0.5px solid rgba(183, 183, 183, 0.99); }
+    .major-navigation__font-size--select {
+      width: 100%; }
+  .major-navigation__layout-mode {
+    width: 10%;
+    padding: .85rem 1.5rem;
+    border: 0.5px solid rgba(183, 183, 183, 0.99); }
+  .major-navigation__display-mode {
+    width: 5%;
+    border: 0.5px solid rgba(183, 183, 183, 0.99);
+    padding: .5rem; }
+  .major-navigation__reset {
+    width: 5%;
+    padding: .5rem;
+    border: 0.5px solid rgba(183, 183, 183, 0.99);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px; }

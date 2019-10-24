@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Bitter|Dancing+Script|Dosis|Liu+Jian+Mao+Cao|Raleway|Shadows+Into+Light|Staatliches&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -12,7 +15,7 @@
   </head>
   <body>
   <header>
-    <div class="minor-navigation">
+    <div class="minor-navigation u-margin-bottom-small">
       <nav class="minor-navigation__nav">
         <div class="minor-navigation__image">
           <img src="img/logo.png" alt="Google Fonts logo" class="minor-navigation__image--size">
@@ -25,7 +28,52 @@
         </ul>
       </nav>
     </div>
+    <div class="major-navigation">
+      <nav class="major-navigation__nav">
+          <div class="major-navigation__search-fonts major-navigation__nav--block">
+            <input type="text" placeholder="Search fonts" class="major-navigation__search-fonts--search">
+          </div>
+          <div class="major-navigation__text major-navigation__nav--block">
+            <input type="text" placeholder="Type Something" class="major-navigation__text--custom">
+          </div>
+          <div class="major-navigation__font-size major-navigation__nav--block">
+            <select name="size" class="major-navigation__font-size--select">
+              <option value="20">20px</option>
+              <option value="24">24px</option>
+              <option value="28">28px</option>
+              <option value="32">32px</option>
+            </select>
+          </div>
+          <div class="major-navigation__display-mode major-navigation__nav--block">
+            <i class="material-icons">
+              view_list
+            </i>
+          </div>
+          <div class="major-navigation__layout-mode major-navigation__nav--block">
+            <div class="major-navigation__layout-mode--black">
+              <input type="radio" class="major-navigation__layout-mode__radio-input" id="small" name="size">
+              <label for="small" class="major-navigation__layout-mode__radio-label">
+                <span class="major-navigation__layout-mode__radio-button"></span>
+                Black</label>
+            </div>
+            <div class="major-navigation__layout-mode--white">
+              <input type="radio" class="major-navigation__layout-mode__radio-input" id="large" name="size">
+              <label for="large" class="major-navigation__layout-mode__radio-label">
+                <span class="major-navigation__layout-mode__radio-button"></span>
+                White</label>
+            </div>
+          </div>
+          <div class="major-navigation__reset major-navigation__nav--block">
+            <i class="material-icons">
+              refresh
+            </i>
+          </div>
+      </nav>
+    </div>
   </header>
+  <main>
+
+  </main>
 
   </body>
 </html>
