@@ -79,6 +79,9 @@ body {
   .row .col-3-of-4 {
     width: calc(3 *((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
 
+.footer {
+  text-align: center; }
+
 .minor-navigation {
   height: 7rem;
   padding: 2.5rem 0;
