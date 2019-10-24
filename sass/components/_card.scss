@@ -1,0 +1,56 @@
+.card {
+  border-top: 1.5px solid $color-primary;
+  padding:.5rem;
+  height: 25rem;
+
+  &__name {
+    font-size:120%;
+  }
+
+  &__creator {
+    font-size: 110%;
+    color: $color-primary-dark;
+  }
+
+  &__sample-text {
+    font-size: 200%;
+    margin-top: 5rem;
+  }
+
+  &__family {
+
+    &--anton {
+      font-family: 'Anton', sans-serif;
+    }
+
+    &--bitter {
+      font-family: 'Bitter', sans-serif;
+    }
+
+    &--dancing-script {
+      font-family: 'Dancing Script', sans-serif;
+    }
+
+    &--dosis {
+      font-family: 'Dosis', sans-serif;
+    }
+
+    &--ljmc {
+      font-family: 'Liu Jian Mao Cao', sans-serif;
+    }
+
+    &--raleway {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    &--shadows-into-light {
+      font-family: 'Shadows into Light', sans-serif;
+    }
+
+    &--staatliches {
+      font-family: 'Staatliches', sans-serif;
+    }
+  }
+
+
+}
