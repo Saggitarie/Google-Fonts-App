@@ -44,7 +44,7 @@ body {
     font-size: 110%;
     color: rgba(183, 183, 183, 0.99); }
   .card__sample-text {
-    font-size: 320%;
+    font-size: 200%;
     height: 15rem;
     margin-top: 5rem;
     overflow: scroll; }
