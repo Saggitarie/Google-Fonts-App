@@ -13,11 +13,11 @@ This was created to join voyage 13 in [Chingu](https://www.chingu.io/) as a prew
 
 Live Version: 
 
-- Still working...
+- You can see the live version [here](https://solo-project-voyage-13.herokuapp.com/)
 
 From the repository:
 
 1. Clone this project locally
 2. Run `npm install`
 3. Compile sass files by running: `npm run compile:sass`
-4. Display clone site on your browser by running `live-server`
+4. Display clone site on your browser by running `npm run start`
