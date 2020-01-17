@@ -65,6 +65,12 @@ body {
   .card__family--staatliches {
     font-family: 'Staatliches', sans-serif; }
 
+.test {
+  background-color: orangered; }
+
+.hello-text {
+  color: blue; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }

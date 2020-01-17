@@ -4,10 +4,11 @@
   "description": "Clone Landing Page for Completing Solo Project",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss dist/css/style.css",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "dev-start": "webpack-dev-server --mode development --open",
+    "start": "npm-run-all compile:sass dev-start"
   },
   "author": "Kohki",
   "license": "ISC",
@@ -16,8 +17,13 @@
     "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
     "core-js": "^3.6.4",
+    "css-loader": "^3.4.2",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
