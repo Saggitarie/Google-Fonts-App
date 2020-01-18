@@ -1,9 +1,7 @@
 import googleFonts from "./api/googleFonts";
 
 export default class FontList {
-  constructor() {
-    console.log(this);
-  }
+  constructor() {}
 
   async getFontList() {
     const apiKey = "AIzaSyAYM8_iuRSCrDGYMRGxk3AXTe_5zAMRkw0";
@@ -30,5 +28,3 @@ export default class FontList {
     console.log(fontList.data.items);
   }
 }
-
-// export default FontList;
