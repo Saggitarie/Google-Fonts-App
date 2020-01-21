@@ -87,7 +87,8 @@ hr {
   .minor-navigation__nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
   .minor-navigation__image {
     display: flex;
     width: 15rem;
