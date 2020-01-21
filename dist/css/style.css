@@ -27,13 +27,16 @@ body {
 .u-margin-top-small {
   margin-top: 2rem; }
 
+hr {
+  border-top: 0.1px solid rgba(232, 232, 232, 0.81); }
+
 .card {
   border-top: 1.5px solid rgba(102, 102, 102, 0.81);
   padding: .5rem;
   height: 25rem;
   position: relative; }
   .card__icons {
-    color: #FF5F5F;
+    color: #ff5252;
     cursor: pointer;
     position: absolute;
     top: .5rem;
@@ -65,71 +68,46 @@ body {
   .card__family--staatliches {
     font-family: 'Staatliches', sans-serif; }
 
-.test {
-  background-color: orangered; }
-
-.hello-text {
-  color: blue; }
-
-.row {
-  max-width: 114rem;
-  margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 4rem; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row [class^=col-] {
-    float: left; }
-    .row [class^=col-]:not(:last-child) {
-      margin-right: 6rem; }
-  .row .col-1-of-2 {
-    width: calc((100% - 6rem) /2); }
-  .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
-  .row .col-2-of-3 {
-    width: calc((2 * ((100% - 2 * 6rem) / 3) + 6rem)); }
-  .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4); }
-  .row .col-2-of-4 {
-    width: calc(2 *((100% - 3 * 6rem) / 4) + 6rem); }
-  .row .col-3-of-4 {
-    width: calc(3 *((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
-
-.footer {
-  text-align: center; }
-
 .minor-navigation {
+  width: 90%;
   height: 7rem;
   padding: 2.5rem 0;
-  border-bottom: 0.5px solid rgba(102, 102, 102, 0.81); }
-  .minor-navigation__image {
-    display: inline;
-    padding-left: 6rem;
-    cursor: pointer; }
-    .minor-navigation__image--size {
-      height: 2.5rem;
-      width: auto; }
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+  .minor-navigation__lockup-logo {
+    height: 2.5rem;
+    opacity: 0.6; }
+  .minor-navigation__lockup-brand {
+    font-family: "Product Sans", Arial, Helvetica, sans-serif;
+    font-size: 213%;
+    align-self: center;
+    font-weight: lighter;
+    opacity: 0.6; }
   .minor-navigation__nav {
-    display: inline; }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .minor-navigation__image {
+    display: flex;
+    width: 15rem;
+    justify-content: space-around; }
   .minor-navigation__list {
-    text-decoration: none;
-    float: right; }
-  .minor-navigation__item {
-    display: inline-block;
-    list-style: none;
-    padding: 0 1.5rem;
-    font-size: 120%;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer; }
-    .minor-navigation__item:last-child {
-      padding-right: 6rem; }
-    .minor-navigation__item:first-child {
-      color: #FF5F5F; }
-    .minor-navigation__item:not(:first-child) {
-      color: rgba(102, 102, 102, 0.81); }
+    display: flex;
+    justify-content: space-between;
+    width: 40rem; }
+    .minor-navigation__list__item {
+      list-style: none;
+      font-size: 140%;
+      text-transform: uppercase;
+      font-weight: inherit;
+      cursor: pointer; }
+      .minor-navigation__list__item:last-child {
+        padding-right: 1rem; }
+      .minor-navigation__list__item:first-child {
+        color: #ff5252; }
+      .minor-navigation__list__item:not(:first-child) {
+        color: rgba(102, 102, 102, 0.81); }
 
 .major-navigation {
   width: 90%;
@@ -164,10 +142,10 @@ body {
     border: none;
     border-top: 1px solid rgba(232, 232, 232, 0.81);
     border-bottom: 1px solid rgba(232, 232, 232, 0.81);
-    transition: border-bottom .2s; }
+    transition: border-bottom 0.2s; }
     .major-navigation__text-input:focus {
       outline: none;
-      border-bottom: 1.2px solid #FF5F5F; }
+      border-bottom: 1.2px solid #ff5252; }
   .major-navigation__select {
     background-color: #fff;
     width: 15rem;
@@ -220,3 +198,32 @@ body {
     border-bottom: 1px solid rgba(232, 232, 232, 0.81);
     border-top-right-radius: 50rem;
     border-bottom-right-radius: 50rem; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 4rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^=col-] {
+    float: left; }
+    .row [class^=col-]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) /2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc((2 * ((100% - 2 * 6rem) / 3) + 6rem)); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 *((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 *((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
+.footer {
+  text-align: center; }

@@ -10,7 +10,6 @@
   margin-bottom: 2rem;
 }
 
-
 .u-margin-top-big {
   margin-top: 8rem;
 }
@@ -21,4 +20,10 @@
 
 .u-margin-top-small {
   margin-top: 2rem;
+}
+
+// Border to separate navigations (Major and Minor Navigation)
+
+hr {
+  border-top: 0.1px solid $color-primary-light;
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss dist/css/style.css",
+    "watch": "node-sass src/sass/main.scss dist/css/style.css -w",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "dev-start": "webpack-dev-server --mode development --open",
