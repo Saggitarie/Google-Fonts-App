@@ -46,54 +46,133 @@
           </ul>
         </nav>
       </div>
-      <!-- <div class="navigation-border u-margin-bottom-small" />
-       -->
       <hr class="u-margin-bottom-small" />
       <div class="major-navigation">
-        <div class="major-navigation__search">
-          <div class="major-navigation__icon">
-            <i class="material-icons">
+        <div class="search-wrapper border-right">
+          <div class="major-navigation__search">
+            <!-- <div class="major-navigation__icon"> -->
+            <!-- <i class="material-icons">
               search
-            </i>
+            </i> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="major-navigation__panel-query-icon"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              ></path>
+            </svg>
           </div>
-          <input
-            type="text"
-            placeholder="Search fonts"
-            class="major-navigation__search-input"
-          />
+          <div class="major-navigation__search ">
+            <input
+              type="text"
+              placeholder="Search fonts"
+              class="major-navigation__search-input"
+            />
+          </div>
         </div>
-        <div class="major-navigation__text">
+        <div class="major-navigation__text border-right">
+          <!-- <div class="border-right"> -->
+          <select name="size" class="major-navigation__text-select">
+            <option value="sentence">Sentence</option>
+            <option value="alphabet">Alphabet</option>
+            <option value="paragraph">Paragraph</option>
+            <option value="number">Numerals</option>
+            <option value="custom">Custom</option>
+          </select>
+          <!-- </div> -->
           <input
             type="text"
             placeholder="Type Something"
             class="major-navigation__text-input"
           />
         </div>
-        <select name="size" class="major-navigation__select">
-          <option value="20">20px</option>
-          <option value="24">24px</option>
-          <option value="28">28px</option>
-          <option value="32">32px</option>
-        </select>
+        <div class="major-navigation__font-size border-right">
+          <select name="size" class="major-navigation__font-size-select">
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+            <option value="28">28px</option>
+            <option value="32">32px</option>
+          </select>
+        </div>
         <div class="major-navigation__mode">
-          <ul class="major-navigation__list">
-            <li
+          <div class="major-navigation__mode-background">
+            <ul class="major-navigation__list">
+              <!-- <li
               class="major-navigation__item major-navigation__item--black"
             ></li>
             <li
               class="major-navigation__item major-navigation__item--white"
-            ></li>
-          </ul>
-        </div>
-        <div class="major-navigation__display-mode">
-          <i class="material-icons">
+            ></li> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="left: 10px;"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M16.56 8.94L7.62 0 6.21 1.41l2.38 2.38-5.15 5.15c-.59.59-.59 1.54 0 2.12l5.5 5.5c.29.29.68.44 1.06.44s.77-.15 1.06-.44l5.5-5.5c.59-.58.59-1.53 0-2.12zM5.21 10L10 5.21 14.79 10H5.21zM19 11.5s-2 2.17-2 3.5c0 1.1.9 2 2 2s2-.9 2-2c0-1.33-2-3.5-2-3.5z"
+                ></path>
+                <path fill-opacity=".36" d="M0 20h24v4H0v-4z"></path>
+              </svg>
+            </ul>
+          </div>
+          <div class="major-navigation__mode-display">
+            <!-- <i class="material-icons">
             view_list
-          </i>
-        </div>
-        <div class="major-navigation__reset major-navigation__nav--block">
-          <i class="material-icons">
+          </i> -->
+            <!-- <svg
+            ng-if="globalFontPreviewToolbar.isRowLayout"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class=""
+            style=""
+          >
+            <path fill="none" d="M0 0h24v24H0V0z"></path>
+            <path
+              d="M4 5v13h17V5H4zm10 2v3.5h-3V7h3zM6 7h3v3.5H6V7zm0 9v-3.5h3V16H6zm5 0v-3.5h3V16h-3zm8 0h-3v-3.5h3V16zm-3-5.5V7h3v3.5h-3z"
+            ></path>
+          </svg> -->
+            <svg
+              ng-if="globalFontPreviewToolbar.isGridLayout"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class=""
+              style=""
+            >
+              <path opacity=".87" fill="none" d="M0 0h24v24H0V0z"></path>
+              <path
+                d="M3 5v14h17V5H3zm4 2v2H5V7h2zm-2 6v-2h2v2H5zm0 2h2v2H5v-2zm13 2H9v-2h9v2zm0-4H9v-2h9v2zm0-4H9V7h9v2z"
+              ></path>
+            </svg>
+          </div>
+          <div
+            class="major-navigation__mode-reset major-navigation__nav--block"
+          >
+            <!-- <i class="material-icons">
             refresh
-          </i>
+          </i> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path fill="none" d="M0 0h24v24H0V0z"></path>
+              <path
+                d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+              ></path>
+            </svg>
+          </div>
         </div>
       </div>
     </header>
@@ -235,7 +314,7 @@
     <footer class="footer u-margin-top-small u-margin-bottom-medium">
       <p>Coded and Copyright &copy; by KohkiShiga | 2019 | Chingu</p>
     </footer>
-    <svg
+    <!-- <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -247,8 +326,8 @@
         d="M16.56 8.94L7.62 0 6.21 1.41l2.38 2.38-5.15 5.15c-.59.59-.59 1.54 0 2.12l5.5 5.5c.29.29.68.44 1.06.44s.77-.15 1.06-.44l5.5-5.5c.59-.58.59-1.53 0-2.12zM5.21 10L10 5.21 14.79 10H5.21zM19 11.5s-2 2.17-2 3.5c0 1.1.9 2 2 2s2-.9 2-2c0-1.33-2-3.5-2-3.5z"
       ></path>
       <path fill-opacity=".36" d="M0 20h24v4H0v-4z"></path>
-    </svg>
-    <svg
+    </svg> -->
+    <!-- <svg
       ng-if="globalFontPreviewToolbar.isGridLayout"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -261,8 +340,8 @@
       <path
         d="M3 5v14h17V5H3zm4 2v2H5V7h2zm-2 6v-2h2v2H5zm0 2h2v2H5v-2zm13 2H9v-2h9v2zm0-4H9v-2h9v2zm0-4H9V7h9v2z"
       ></path>
-    </svg>
-    <svg
+    </svg> -->
+    <!-- <svg
       ng-if="globalFontPreviewToolbar.isRowLayout"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -286,8 +365,8 @@
       <path
         d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
       ></path>
-    </svg>
-    <svg
+    </svg> -->
+    <!-- <svg
       xmlns="http://www.w3.org/2000/svg"
       class="search-panel-query-icon"
       width="24px"
@@ -297,6 +376,6 @@
       <path
         d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
       ></path>
-    </svg>
+    </svg> -->
   </body>
 </html>
