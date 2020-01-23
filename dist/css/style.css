@@ -146,9 +146,9 @@ hr {
       width: 65%;
       height: 90%;
       font-size: 1.5rem;
-      padding-left: 1.5rem;
       border: none;
-      border-bottom: 1px solid transparent;
+      border-bottom: 0.5px solid rgba(232, 232, 232, 0.81);
+      transform: translateX(5%);
       transition: border-bottom 0.2s; }
       .major-navigation__text-input:focus {
         outline: none;
