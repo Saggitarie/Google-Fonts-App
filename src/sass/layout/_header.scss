@@ -211,14 +211,17 @@
     &-background {
       align-self: center;
       border-right: 1px solid $color-primary-light;
-
       padding-right: 2rem;
+      cursor: pointer;
+
+      // padding: 1.5rem;
     }
 
     &-display {
       align-self: center;
       border-right: 1px solid $color-primary-light;
       padding-right: 2rem;
+      cursor: pointer;
       // width: 10rem;
       // text-align: center;
       // padding-top: 1rem;
@@ -230,12 +233,13 @@
 
     &-reset {
       align-self: center;
+      padding-right: 2rem;
+      cursor: pointer;
       // padding-right: 2rem;
       // text-align: center;
       // width: 10rem;
       // padding-top: 1rem;
       // border: 1px solid $color-primary-light;
-      // cursor: pointer;
 
       // border: none;
       // border-right: 1px solid $color-primary-light;

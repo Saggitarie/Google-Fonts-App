@@ -185,13 +185,17 @@ hr {
     .major-navigation__mode-background {
       align-self: center;
       border-right: 1px solid rgba(232, 232, 232, 0.81);
-      padding-right: 2rem; }
+      padding-right: 2rem;
+      cursor: pointer; }
     .major-navigation__mode-display {
       align-self: center;
       border-right: 1px solid rgba(232, 232, 232, 0.81);
-      padding-right: 2rem; }
+      padding-right: 2rem;
+      cursor: pointer; }
     .major-navigation__mode-reset {
-      align-self: center; }
+      align-self: center;
+      padding-right: 2rem;
+      cursor: pointer; }
   .major-navigation__item {
     cursor: pointer;
     border: 1px solid rgba(232, 232, 232, 0.81);
