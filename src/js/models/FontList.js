@@ -1,12 +1,12 @@
 import googleFonts from "./api/googleFonts";
+import config from "./config";
 
 export default class FontList {
   constructor() {}
 
   async getFontList() {
-    const apiKey = "AIzaSyAYM8_iuRSCrDGYMRGxk3AXTe_5zAMRkw0";
     const fontList = await googleFonts()
-      .get(`webfonts?key=${apiKey}&sort=popularity`)
+      .get(`webfonts?key=${config.apiKEY}&sort=popularity`)
       .catch(function(error) {
         if (error.response) {
           // The request was made and the server responded with a status code

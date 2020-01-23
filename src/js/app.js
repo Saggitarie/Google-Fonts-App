@@ -5,8 +5,8 @@ var inputValue, resetButton, fontSize;
 
 // Event Listener for 'Type Something' Input Element
 inputValue = document.querySelector(".major-navigation__text-input");
-resetButton = document.querySelector(".major-navigation__reset");
-fontSize = document.querySelector(".major-navigation__select");
+resetButton = document.querySelector(".major-navigation__mode-reset");
+fontSize = document.querySelector(".major-navigation__font-size");
 
 inputValue.addEventListener("input", function() {
   var customTextByUser = inputValue.value;
