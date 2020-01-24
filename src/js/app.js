@@ -89,6 +89,14 @@ elements.fontSize.addEventListener("input", function() {
 const list = new FontList();
 list.getFontList();
 
+window.onscroll = function() {
+  if (window.scrollY > 80) {
+    elements.toTopButton.style.visibility = "visible";
+  } else if (window.scrollY < 80) {
+    elements.toTopButton.style.visibility = "hidden";
+  }
+};
+
 console.log(window.scrollX);
 // Around 80?
 console.log(window.scrollY);

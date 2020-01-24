@@ -32,6 +32,7 @@ hr {
   border-top: 0.1px solid rgba(232, 232, 232, 0.81); }
 
 .scroll-top-wrapper {
+  visibility: hidden;
   display: inline-block;
   border-radius: 50%;
   position: fixed;
