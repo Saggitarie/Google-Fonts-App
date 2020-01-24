@@ -7,7 +7,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
@@ -29,6 +30,33 @@ body {
 
 hr {
   border-top: 0.1px solid rgba(232, 232, 232, 0.81); }
+
+.scroll-top-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  z-index: 9999;
+  background-color: white;
+  border: 1px solid rgba(232, 232, 232, 0.5);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+  .scroll-top-wrapper:hover {
+    background-color: rgba(232, 232, 232, 0.2); }
+
+.scroll-top-button {
+  border: none;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  z-index: 9999;
+  border: 1px solid rgba(232, 232, 232, 0.5);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  cursor: pointer; }
+  .scroll-top-button:focus {
+    outline: none; }
+  .scroll-top-button:hover {
+    background-color: rgba(232, 232, 232, 0.2); }
 
 .card {
   border-top: 1.5px solid rgba(102, 102, 102, 0.81);

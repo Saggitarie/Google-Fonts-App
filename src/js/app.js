@@ -1,14 +1,25 @@
 import FontList from "./models/FontList.js";
+import { elements } from "./views/base";
 
 //Define variables to control input values.
-var inputValue, resetButton, fontSize;
+var inputValue, resetButton, fontSize, toTopButton;
 
 // Event Listener for 'Type Something' Input Element
-inputValue = document.querySelector(".major-navigation__text-input");
-resetButton = document.querySelector(".major-navigation__mode-reset");
-fontSize = document.querySelector(".major-navigation__font-size");
+// inputValue = document.querySelector(".major-navigation__text-input");
+// resetButton = document.querySelector(".major-navigation__mode-reset");
+// fontSize = document.querySelector(".major-navigation__font-size");
+// toTopButton = document.querySelector(".scroll-top-wrapper");
 
-inputValue.addEventListener("input", function() {
+//To Top Button
+elements.toTopButton.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+// Input text
+elements.inputValue.addEventListener("input", function() {
   var customTextByUser = inputValue.value;
 
   var sampleTexts = document.getElementsByClassName("card__sample-text");
@@ -19,7 +30,7 @@ inputValue.addEventListener("input", function() {
 });
 
 //Reset Button
-resetButton.addEventListener("click", function() {
+elements.resetButton.addEventListener("click", function() {
   inputValue.value = "";
 
   var sampleTexts = document.getElementsByClassName("card__sample-text");
@@ -30,7 +41,7 @@ resetButton.addEventListener("click", function() {
 });
 
 // Font Size
-fontSize.addEventListener("input", function() {
+elements.fontSize.addEventListener("input", function() {
   var x = fontSize.value;
 
   switch (x) {
@@ -77,3 +88,9 @@ fontSize.addEventListener("input", function() {
 
 const list = new FontList();
 list.getFontList();
+
+console.log(window.scrollX);
+// Around 80?
+console.log(window.scrollY);
+
+console.log(toTopButton);
