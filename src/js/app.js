@@ -1,15 +1,6 @@
 import FontList from "./models/FontList.js";
 import { elements } from "./views/base";
 
-//Define variables to control input values.
-var inputValue, resetButton, fontSize, toTopButton;
-
-// Event Listener for 'Type Something' Input Element
-// inputValue = document.querySelector(".major-navigation__text-input");
-// resetButton = document.querySelector(".major-navigation__mode-reset");
-// fontSize = document.querySelector(".major-navigation__font-size");
-// toTopButton = document.querySelector(".scroll-top-wrapper");
-
 //To Top Button
 elements.toTopButton.addEventListener("click", function() {
   window.scrollTo({
@@ -96,9 +87,3 @@ window.onscroll = function() {
     elements.toTopButton.style.visibility = "hidden";
   }
 };
-
-console.log(window.scrollX);
-// Around 80?
-console.log(window.scrollY);
-
-console.log(toTopButton);
