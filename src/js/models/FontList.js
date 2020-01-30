@@ -2,7 +2,13 @@ import googleFonts from "./api/googleFonts";
 import config from "./config";
 
 export default class FontList {
-  constructor() {}
+  constructor(sortOptions) {
+    this.fontInfo = {};
+  }
+
+  getConstructorValue() {
+    return this.fontInfo.fontArray;
+  }
 
   async getFontList() {
     const fontList = await googleFonts()
@@ -24,7 +30,8 @@ export default class FontList {
           console.log("Other Error", error.response);
         }
       });
-
-    console.log(fontList.data.items);
+    // this.fontInfo.fontArray = fontList.data.items;
+    // return fontList.data.items;
+    this.fontArray = fontList.data.items;
   }
 }

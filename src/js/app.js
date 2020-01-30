@@ -1,7 +1,11 @@
 import FontList from "./models/FontList.js";
+import { renderFontCards } from "./views/fontView";
 import { elements } from "./views/base";
 
-//To Top Button
+//Declare state
+let state = {};
+
+//To Top Button Event Handler
 elements.toTopButton.addEventListener("click", function() {
   window.scrollTo({
     top: 0,
@@ -77,8 +81,13 @@ elements.fontSize.addEventListener("input", function() {
   }
 });
 
-const list = new FontList();
-list.getFontList();
+(async function() {
+  state.list = new FontList();
+  let t = await state.list.getFontList();
+  console.log(state.list.fontArray);
+})();
+
+// initialize();
 
 window.onscroll = function() {
   if (window.scrollY > 80) {
