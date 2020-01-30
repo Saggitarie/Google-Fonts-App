@@ -1,5 +1,5 @@
 import FontList from "./models/FontList.js";
-import { renderFontCards } from "./views/fontView";
+import { renderAllFontCards } from "./views/fontView";
 import { elements } from "./views/base";
 
 //Declare state
@@ -84,16 +84,14 @@ elements.fontSize.addEventListener("input", function() {
 (async function() {
   state.list = new FontList();
   await state.list.getFontList();
-  state.fontListInfo = state.list.fontArray;
+  state.fontListInfos = state.list.fontArray;
 
-  // console.log(state.fontListInfo);
+  console.log(state.fontListInfos);
 
-  state.fontListInfo.forEach(el => {
-    renderFontCards(el);
+  state.fontListInfos.forEach(fontInfo => {
+    renderAllFontCards(fontInfo);
   });
 })();
-
-// initialize();
 
 window.onscroll = function() {
   if (window.scrollY > 80) {
