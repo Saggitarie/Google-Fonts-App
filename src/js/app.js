@@ -1,5 +1,9 @@
 import FontList from "./models/FontList.js";
-import { renderAllFontCards, renderRelativeLinkTags } from "./views/fontView";
+import {
+  renderAllFontCards,
+  renderRelativeLinkTags,
+  removeAllNodes
+} from "./views/fontView";
 import { elements } from "./views/base";
 
 //Declare state
@@ -95,6 +99,8 @@ elements.fontSize.addEventListener("input", function() {
   state.fontListInfos.forEach(fontInfo => {
     renderAllFontCards(fontInfo);
   });
+
+  removeAllNodes();
 })();
 
 window.onscroll = function() {

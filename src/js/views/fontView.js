@@ -91,3 +91,7 @@ const renderExceptionalLinkTags = fontFamily => {
 export const renderAllFontCards = fontListInfo => {
   renderFontCard(fontListInfo);
 };
+
+export const removeAllNodes = () => {
+  elements.container.removeChild(elements.cards);
+};
