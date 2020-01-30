@@ -1,4 +1,4 @@
-import { elements } from "./base";
+import { elements, fontPreview } from "./base";
 
 const renderFontCard = fontInfo => {
   const markup = `
@@ -17,8 +17,13 @@ const renderFontCard = fontInfo => {
         <p style="font-family: ${
           fontInfo.family
         }, sans-serif;"  class="card__sample-text card__family--anton">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
-            at aut cum dicta dolorum facere ipsa iure minima molestiae
+            ${
+              fontPreview.sampleSentences[
+                Math.ceil(
+                  Math.random() * fontPreview.sampleSentences.length - 1
+                )
+              ]
+            }
         </p>
     </article>
     `;
