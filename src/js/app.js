@@ -10,9 +10,34 @@ import { elements } from "./views/base";
 let state = {};
 
 //Search Input Handler
-elements.searchInput.addEventListener("keydown", function(e) {
+elements.searchInput.addEventListener("keyup", function(e) {
   removeAllNodes();
-  console.log(state.fontListInfos);
+  if (e.target.value === "") {
+    state.fontListInfos.forEach(fontInfo => {
+      renderAllFontCards(fontInfo);
+    });
+  }
+
+  let inputValue = e.target.value;
+  // console.log(inputValue);
+  console.log(inputValue);
+
+  state.searchResult = state.fontListInfos.filter(function(el) {
+    let numOfLetters = inputValue.length;
+    // console.log(numOfLetters);
+
+    return el.family.substring(0, numOfLetters) === inputValue;
+  });
+
+  // state.fontListInfos.forEach(el => {
+  //   let numOfLetters = inputValue.length;
+
+  //   console.log(el.family.substring(0, numOfLetters));
+  //   console.log(`From user input: ${inputValue}`);
+  // });
+  state.searchResult.forEach(fontInfo => {
+    renderAllFontCards(fontInfo);
+  });
 });
 
 //To Top Button Event Handler
@@ -97,7 +122,7 @@ elements.fontSize.addEventListener("input", function() {
   await state.list.getFontList();
   state.fontListInfos = state.list.fontArray;
 
-  // console.log(state.fontListInfos);
+  console.log(state.fontListInfos);
 
   state.fontListInfos.forEach(fontInfo => {
     renderRelativeLinkTags(fontInfo);
