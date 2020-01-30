@@ -26,16 +26,66 @@ const renderFontCard = fontInfo => {
   elements.container.insertAdjacentHTML("beforeend", markup);
 };
 
+let exceptionalFonts = [
+  "Open+Sans+Condensed",
+  "Sunflower",
+  "Coda+Caption",
+  "Buda",
+  "Molle",
+  "UnifrakturCook"
+];
+
+let link = elements.link;
+
 const renderRelativeLinkTags = fontFamily => {
-  // let linktag = `"https://fonts.googleapis.com/css?family=${fontFamily}&display=swap"" rel="stylesheet">`;
+  if (exceptionalFonts.includes(fontFamily)) {
+    renderExceptionalLinkTags(fontFamily);
+  } else {
+    link.rel = "stylesheet";
+    link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}&display=swap`;
 
-  let link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}&display=swap`;
-  // link.type = "text/html";
+    elements.head.appendChild(link);
+  }
+};
 
-  elements.head.appendChild(link);
-  // elements.head.insertAdjacentElement("beforeend", linktag);
+const renderExceptionalLinkTags = fontFamily => {
+  switch (fontFamily) {
+    case exceptionalFonts[0]:
+      link.rel = "stylesheet";
+      //https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap
+      link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}:300&display=swap`;
+      elements.head.appendChild(link);
+
+    case exceptionalFonts[1]:
+      link.rel = "stylesheet";
+      //<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+      link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}:300&display=swap`;
+      elements.head.appendChild(link);
+
+    case exceptionalFonts[2]:
+      link.rel = "stylesheet";
+      //<link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet">
+      link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}:800&display=swap`;
+      elements.head.appendChild(link);
+
+    case exceptionalFonts[3]:
+      link.rel = "stylesheet";
+      //<link href="https://fonts.googleapis.com/css?family=Buda:300&display=swap" rel="stylesheet">
+      link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}:300&display=swap`;
+      elements.head.appendChild(link);
+
+    case exceptionalFonts[4]:
+      link.rel = "stylesheet";
+      //<link href="https://fonts.googleapis.com/css?family=Molle:400i&display=swap" rel="stylesheet">
+      link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}:400&display=swap`;
+      elements.head.appendChild(link);
+
+    case exceptionalFonts[5]:
+      link.rel = "stylesheet";
+      //<link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700&display=swap" rel="stylesheet">
+      link.href = `https://fonts.googleapis.com/css?family=${fontFamily.family}:700&display=swap`;
+      elements.head.appendChild(link);
+  }
 };
 
 export const renderAllFontCards = fontListInfo => {
