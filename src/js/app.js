@@ -1,5 +1,5 @@
 import FontList from "./models/FontList.js";
-import { renderAllFontCards } from "./views/fontView";
+import { renderAllFontCards, renderRelativeLinkTags } from "./views/fontView";
 import { elements } from "./views/base";
 
 //Declare state
@@ -87,6 +87,10 @@ elements.fontSize.addEventListener("input", function() {
   state.fontListInfos = state.list.fontArray;
 
   console.log(state.fontListInfos);
+
+  state.fontListInfos.forEach(fontInfo => {
+    renderRelativeLinkTags(fontInfo);
+  });
 
   state.fontListInfos.forEach(fontInfo => {
     renderAllFontCards(fontInfo);

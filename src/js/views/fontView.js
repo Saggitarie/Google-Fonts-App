@@ -27,18 +27,17 @@ const renderFontCard = fontInfo => {
 };
 
 let exceptionalFonts = [
-  "Open+Sans+Condensed",
+  "Open Sans Condensed",
   "Sunflower",
-  "Coda+Caption",
+  "Coda Caption",
   "Buda",
   "Molle",
   "UnifrakturCook"
 ];
 
-let link = elements.link;
-
-const renderRelativeLinkTags = fontFamily => {
-  if (exceptionalFonts.includes(fontFamily)) {
+export const renderRelativeLinkTags = fontFamily => {
+  let link = document.createElement("link");
+  if (exceptionalFonts.includes(fontFamily.family)) {
     renderExceptionalLinkTags(fontFamily);
   } else {
     link.rel = "stylesheet";
@@ -49,6 +48,7 @@ const renderRelativeLinkTags = fontFamily => {
 };
 
 const renderExceptionalLinkTags = fontFamily => {
+  console.log("Called");
   switch (fontFamily) {
     case exceptionalFonts[0]:
       link.rel = "stylesheet";
@@ -90,5 +90,4 @@ const renderExceptionalLinkTags = fontFamily => {
 
 export const renderAllFontCards = fontListInfo => {
   renderFontCard(fontListInfo);
-  renderRelativeLinkTags(fontListInfo);
 };

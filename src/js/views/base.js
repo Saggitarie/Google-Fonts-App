@@ -4,6 +4,5 @@ export const elements = {
   fontSize: document.querySelector(".major-navigation__font-size"),
   toTopButton: document.querySelector(".scroll-top-wrapper"),
   container: document.querySelector(".container"),
-  head: document.getElementsByTagName("head")[0],
-  link: document.createElement("link")
+  head: document.getElementsByTagName("head")[0]
 };
