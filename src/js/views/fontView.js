@@ -48,7 +48,7 @@ export const renderRelativeLinkTags = fontFamily => {
 };
 
 const renderExceptionalLinkTags = fontFamily => {
-  console.log("Called");
+  // console.log("Called");
   switch (fontFamily) {
     case exceptionalFonts[0]:
       link.rel = "stylesheet";
@@ -93,5 +93,7 @@ export const renderAllFontCards = fontListInfo => {
 };
 
 export const removeAllNodes = () => {
-  elements.container.removeChild(elements.cards);
+  while (elements.container.firstChild) {
+    elements.container.removeChild(elements.container.firstChild);
+  }
 };

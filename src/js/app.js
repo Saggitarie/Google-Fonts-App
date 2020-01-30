@@ -9,6 +9,12 @@ import { elements } from "./views/base";
 //Declare state
 let state = {};
 
+//Search Input Handler
+elements.searchInput.addEventListener("keydown", function(e) {
+  removeAllNodes();
+  console.log(state.fontListInfos);
+});
+
 //To Top Button Event Handler
 elements.toTopButton.addEventListener("click", function() {
   window.scrollTo({
@@ -85,12 +91,13 @@ elements.fontSize.addEventListener("input", function() {
   }
 });
 
+//Initialization
 (async function() {
   state.list = new FontList();
   await state.list.getFontList();
   state.fontListInfos = state.list.fontArray;
 
-  console.log(state.fontListInfos);
+  // console.log(state.fontListInfos);
 
   state.fontListInfos.forEach(fontInfo => {
     renderRelativeLinkTags(fontInfo);
@@ -99,8 +106,6 @@ elements.fontSize.addEventListener("input", function() {
   state.fontListInfos.forEach(fontInfo => {
     renderAllFontCards(fontInfo);
   });
-
-  removeAllNodes();
 })();
 
 window.onscroll = function() {
