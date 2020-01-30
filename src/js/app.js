@@ -83,8 +83,14 @@ elements.fontSize.addEventListener("input", function() {
 
 (async function() {
   state.list = new FontList();
-  let t = await state.list.getFontList();
-  console.log(state.list.fontArray);
+  await state.list.getFontList();
+  state.fontListInfo = state.list.fontArray;
+
+  // console.log(state.fontListInfo);
+
+  state.fontListInfo.forEach(el => {
+    renderFontCards(el);
+  });
 })();
 
 // initialize();
