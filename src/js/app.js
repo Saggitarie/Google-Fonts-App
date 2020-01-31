@@ -50,11 +50,23 @@ elements.inputValueById.addEventListener("keyup", function(e) {
 
 //Reset Button
 elements.resetButton.addEventListener("click", function() {
+  //Set Option Values for Font Size and Text Style to Defaul values
   elements.textFormat.value = "sentence";
+  elements.fontSizeOptionValue.value = "24";
+
+  //Remove All Nodes Before Change
   removeAllNodes();
 
+  elements.searchInput.value = "";
+  elements.typeSomething.value = "";
   state.searchResult = state.fontListInfos;
 
+  // Set Font Size to 24px on Reset
+  elements.inputValue.forEach(function(el) {
+    el.style.fontSize = `${24 * 10}%`;
+  });
+
+  // Set All Text Format to Sentence
   state.searchResult.forEach(fontInfo => {
     console.log(fontInfo);
     renderAllFontCards(fontInfo, "sentence");
