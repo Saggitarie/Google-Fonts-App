@@ -39,7 +39,7 @@ elements.toTopButton.addEventListener("click", function() {
   });
 });
 
-// Input text
+// Type Something Input
 elements.inputValueById.addEventListener("keyup", function(e) {
   let customTextByUser = e.target.value;
 
@@ -50,13 +50,15 @@ elements.inputValueById.addEventListener("keyup", function(e) {
 
 //Reset Button
 elements.resetButton.addEventListener("click", function() {
-  inputValue.value = "";
+  elements.textFormat.value = "sentence";
+  removeAllNodes();
 
-  var sampleTexts = document.getElementsByClassName("card__sample-text");
+  state.searchResult = state.fontListInfos;
 
-  for (var sampleText of sampleTexts) {
-    sampleText.textContent = "";
-  }
+  state.searchResult.forEach(fontInfo => {
+    console.log(fontInfo);
+    renderAllFontCards(fontInfo, "sentence");
+  });
 });
 
 //Sample Text Style
