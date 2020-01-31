@@ -1,5 +1,4 @@
 //Minor Navigation
-
 .minor-navigation {
   width: 90%;
   height: 7rem;
@@ -169,25 +168,25 @@
     flex-direction: row;
     justify-content: space-around;
 
-    flex-grow: 2;
+    flex: 1;
 
     &-background {
       align-self: center;
       border-right: 1px solid $color-primary-light;
-      padding-right: 2rem;
+      padding: 0 1.5rem;
       cursor: pointer;
     }
 
     &-display {
       align-self: center;
       border-right: 1px solid $color-primary-light;
-      padding-right: 2rem;
+      padding-right: 1.5rem;
       cursor: pointer;
     }
 
     &-reset {
       align-self: center;
-      padding-right: 2rem;
+      padding-right: 1rem;
       cursor: pointer;
     }
   }
@@ -196,7 +195,7 @@
     cursor: pointer;
     border: 1px solid $color-primary-light;
     border-radius: 50rem;
-    padding: 1rem;
+    padding-right: 1rem;
     display: inline-block;
 
     &--black {
