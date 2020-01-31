@@ -20,22 +20,13 @@ elements.searchInput.addEventListener("keyup", function(e) {
   }
 
   let inputValue = e.target.value;
-  // console.log(inputValue);
-  // console.log(inputValue);
 
   state.searchResult = state.fontListInfos.filter(function(el) {
     let numOfLetters = inputValue.length;
-    // console.log(numOfLetters);
 
     return el.family.substring(0, numOfLetters) === inputValue;
   });
 
-  // state.fontListInfos.forEach(el => {
-  //   let numOfLetters = inputValue.length;
-
-  //   console.log(el.family.substring(0, numOfLetters));
-  //   console.log(`From user input: ${inputValue}`);
-  // });
   state.searchResult.forEach(fontInfo => {
     renderAllFontCards(fontInfo);
   });
@@ -52,16 +43,11 @@ elements.toTopButton.addEventListener("click", function() {
 // Input text
 elements.inputValueById.addEventListener("keyup", function(e) {
   let customTextByUser = e.target.value;
-  // var sampleTexts = elements.inputValue.innerText;
-  // for (var sampleText of sampleTexts) {
-  //   sampleText.textContent = customTextByUser;
-  // }
+
   elements.inputValue.forEach(function(el) {
     el.innerText = customTextByUser;
   });
 });
-
-// console.log(elements.inputValue);
 
 //Reset Button
 elements.resetButton.addEventListener("click", function() {
@@ -85,8 +71,6 @@ elements.textFormat.addEventListener("change", function(e) {
   }
 
   state.searchResult.forEach(fontInfo => {
-    // console.log(fontInfo);
-    // console.log(textFormat);
     renderAllFontCards(fontInfo, textFormat);
   });
 });
@@ -95,59 +79,9 @@ elements.textFormat.addEventListener("change", function(e) {
 elements.fontSize.addEventListener("change", function(e) {
   var x = e.target.value;
 
-  // elements.inputValue.style.fontSize = `${e * 10}%`;
-
-  // state.searchResult.forEach(function(el) {
-  // el.elements.inputValue.style.fontSize = `${e * 10}%`;
-  // console.log(elements.inputValue);
   elements.inputValue.forEach(function(el) {
-    //document.getElementsByClassName("card__sample-text")[0].style.fontSize = "240%"
-    console.log("Called");
-    // el.style.fontSize = '"' + e.target.value * 10 + '%"';
-    console.log(`fontsize: ${(el.style.fontSize = e.target.value + "px")}`);
+    el.style.fontSize = `${e.target.value * 10}%`;
   });
-  // console.log(el.elements.inputValue.style.fontSize);
-  // });
-  // switch (x) {
-  //   case "20":
-  //     // document.querySelector('.card__sample-text').style.fontSize = '200%';
-  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
-
-  //     for (var sampleText of sampleTexts) {
-  //       sampleText.style.fontSize = "200%";
-  //     }
-  //     break;
-
-  //   case "24":
-  //     // document.querySelector('.card__sample-text').style.fontSize = '240%';
-
-  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
-
-  //     for (var sampleText of sampleTexts) {
-  //       sampleText.style.fontSize = "240%";
-  //     }
-  //     break;
-
-  //   case "28":
-  //     // document.querySelector('.card__sample-text').style.fontSize = '280%';
-
-  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
-
-  //     for (var sampleText of sampleTexts) {
-  //       sampleText.style.fontSize = "280%";
-  //     }
-  //     break;
-
-  //   case "32":
-  //     // document.querySelector('.card__sample-text').style.fontSize = '320%';
-
-  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
-
-  //     for (var sampleText of sampleTexts) {
-  //       sampleText.style.fontSize = "320%";
-  //     }
-  //     break;
-  // }
 });
 
 //Initialization
@@ -155,8 +89,6 @@ elements.fontSize.addEventListener("change", function(e) {
   state.list = new FontList();
   await state.list.getFontList();
   state.fontListInfos = state.list.fontArray;
-
-  // console.log(state.fontListInfos);
 
   state.fontListInfos.forEach(fontInfo => {
     renderRelativeLinkTags(fontInfo);
