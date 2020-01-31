@@ -1,5 +1,5 @@
 export const elements = {
-  inputValue: document.querySelector(".major-navigation__text-input"),
+  inputValue: document.getElementsByClassName("card__sample-text"),
   inputValueById: document.getElementById("typesth"),
   resetButton: document.querySelector(".major-navigation__mode-reset"),
   fontSize: document.querySelector(".major-navigation__font-size"),

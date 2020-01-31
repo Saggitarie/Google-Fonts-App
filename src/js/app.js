@@ -50,15 +50,18 @@ elements.toTopButton.addEventListener("click", function() {
 });
 
 // Input text
-elements.inputValue.addEventListener("input", function() {
-  var customTextByUser = inputValue.value;
-
-  var sampleTexts = document.getElementsByClassName("card__sample-text");
-
-  for (var sampleText of sampleTexts) {
-    sampleText.textContent = customTextByUser;
-  }
+elements.inputValueById.addEventListener("keyup", function(e) {
+  let customTextByUser = e.target.value;
+  // var sampleTexts = elements.inputValue.innerText;
+  // for (var sampleText of sampleTexts) {
+  //   sampleText.textContent = customTextByUser;
+  // }
+  elements.inputValue.forEach(function(el) {
+    el.innerText = customTextByUser;
+  });
 });
+
+console.log(elements.inputValue);
 
 //Reset Button
 elements.resetButton.addEventListener("click", function() {
