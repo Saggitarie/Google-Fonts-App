@@ -35,8 +35,7 @@ elements.searchInput.addEventListener("keyup", function(e) {
 //To Top Button Event Handler
 elements.toTopButton.addEventListener("click", function() {
   window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+    top: 0
   });
 });
 
