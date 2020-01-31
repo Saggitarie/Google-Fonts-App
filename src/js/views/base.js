@@ -1,7 +1,9 @@
 export const elements = {
   inputValue: document.querySelector(".major-navigation__text-input"),
+  inputValueById: document.getElementById("typesth"),
   resetButton: document.querySelector(".major-navigation__mode-reset"),
   fontSize: document.querySelector(".major-navigation__font-size"),
+  textFormat: document.querySelector(".major-navigation__text-select"),
   toTopButton: document.querySelector(".scroll-top-wrapper"),
   searchInput: document.querySelector(".major-navigation__search-input"),
   container: document.querySelector(".container"),
@@ -39,6 +41,5 @@ export const fontPreview = {
   ],
   sampleAlphabet:
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ‘?’“!”(%)[#]{@}/&<-+÷×=>®©$€£¥¢:;,.*",
-  sampleNumerals:
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ‘?’“!”(%)[#]{@}/&<-+÷×=>®©$€£¥¢:;,.*"
+  sampleNumbers: "1234567890"
 };

@@ -1,6 +1,6 @@
 import { elements, fontPreview } from "./base";
 
-const renderFontCard = fontInfo => {
+const renderFontCard = (fontInfo, textStyle) => {
   const markup = `
     <article class="card">
         <div class="card__subset">
@@ -14,15 +14,27 @@ const renderFontCard = fontInfo => {
         <p class="card__creator">Vernon Adams( ${
           Object.keys(fontInfo.files).length
         } styles )</p>
-        <p style="font-family: ${
+        <p contentEditable="true" style="font-family: ${
           fontInfo.family
         }, sans-serif;"  class="card__sample-text card__family--anton">
             ${
-              fontPreview.sampleSentences[
-                Math.ceil(
-                  Math.random() * fontPreview.sampleSentences.length - 1
-                )
-              ]
+              textStyle === "sentence"
+                ? fontPreview.sampleSentences[
+                    Math.ceil(
+                      Math.random() * fontPreview.sampleSentences.length - 1
+                    )
+                  ]
+                : textStyle === "paragraph"
+                ? fontPreview.sampleParagraphs[
+                    Math.ceil(
+                      Math.random() * fontPreview.sampleParagraphs.length - 1
+                    )
+                  ]
+                : textStyle === "alphabet"
+                ? fontPreview.sampleAlphabet
+                : textStyle === "number"
+                ? fontPreview.sampleNumbers
+                : ""
             }
         </p>
     </article>
@@ -93,8 +105,8 @@ const renderExceptionalLinkTags = fontFamily => {
   }
 };
 
-export const renderAllFontCards = fontListInfo => {
-  renderFontCard(fontListInfo);
+export const renderAllFontCards = (fontListInfo, textStyle = "sentence") => {
+  renderFontCard(fontListInfo, textStyle);
 };
 
 export const removeAllNodes = () => {

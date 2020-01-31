@@ -13,7 +13,8 @@ let state = {};
 elements.searchInput.addEventListener("keyup", function(e) {
   removeAllNodes();
   if (e.target.value === "") {
-    state.fontListInfos.forEach(fontInfo => {
+    state.searchResult = state.fontListInfos;
+    state.searchResult.forEach(fontInfo => {
       renderAllFontCards(fontInfo);
     });
   }
@@ -70,6 +71,23 @@ elements.resetButton.addEventListener("click", function() {
   }
 });
 
+//Sample Text Style
+elements.textFormat.addEventListener("change", function(e) {
+  var textFormat = e.target.value;
+
+  removeAllNodes();
+
+  if (textFormat === "custom") {
+    elements.inputValueById.focus();
+  }
+
+  state.searchResult.forEach(fontInfo => {
+    console.log(fontInfo);
+    console.log(textFormat);
+    renderAllFontCards(fontInfo, textFormat);
+  });
+});
+
 // Font Size
 elements.fontSize.addEventListener("input", function() {
   var x = fontSize.value;
@@ -122,7 +140,7 @@ elements.fontSize.addEventListener("input", function() {
   await state.list.getFontList();
   state.fontListInfos = state.list.fontArray;
 
-  console.log(state.fontListInfos);
+  // console.log(state.fontListInfos);
 
   state.fontListInfos.forEach(fontInfo => {
     renderRelativeLinkTags(fontInfo);
