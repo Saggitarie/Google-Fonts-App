@@ -21,7 +21,7 @@ elements.searchInput.addEventListener("keyup", function(e) {
 
   let inputValue = e.target.value;
   // console.log(inputValue);
-  console.log(inputValue);
+  // console.log(inputValue);
 
   state.searchResult = state.fontListInfos.filter(function(el) {
     let numOfLetters = inputValue.length;
@@ -61,7 +61,7 @@ elements.inputValueById.addEventListener("keyup", function(e) {
   });
 });
 
-console.log(elements.inputValue);
+// console.log(elements.inputValue);
 
 //Reset Button
 elements.resetButton.addEventListener("click", function() {
@@ -85,56 +85,69 @@ elements.textFormat.addEventListener("change", function(e) {
   }
 
   state.searchResult.forEach(fontInfo => {
-    console.log(fontInfo);
-    console.log(textFormat);
+    // console.log(fontInfo);
+    // console.log(textFormat);
     renderAllFontCards(fontInfo, textFormat);
   });
 });
 
 // Font Size
-elements.fontSize.addEventListener("input", function() {
-  var x = fontSize.value;
+elements.fontSize.addEventListener("change", function(e) {
+  var x = e.target.value;
 
-  switch (x) {
-    case "20":
-      // document.querySelector('.card__sample-text').style.fontSize = '200%';
-      var sampleTexts = document.getElementsByClassName("card__sample-text");
+  // elements.inputValue.style.fontSize = `${e * 10}%`;
 
-      for (var sampleText of sampleTexts) {
-        sampleText.style.fontSize = "200%";
-      }
-      break;
+  // state.searchResult.forEach(function(el) {
+  // el.elements.inputValue.style.fontSize = `${e * 10}%`;
+  // console.log(elements.inputValue);
+  elements.inputValue.forEach(function(el) {
+    //document.getElementsByClassName("card__sample-text")[0].style.fontSize = "240%"
+    console.log("Called");
+    // el.style.fontSize = '"' + e.target.value * 10 + '%"';
+    console.log(`fontsize: ${(el.style.fontSize = e.target.value + "px")}`);
+  });
+  // console.log(el.elements.inputValue.style.fontSize);
+  // });
+  // switch (x) {
+  //   case "20":
+  //     // document.querySelector('.card__sample-text').style.fontSize = '200%';
+  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
 
-    case "24":
-      // document.querySelector('.card__sample-text').style.fontSize = '240%';
+  //     for (var sampleText of sampleTexts) {
+  //       sampleText.style.fontSize = "200%";
+  //     }
+  //     break;
 
-      var sampleTexts = document.getElementsByClassName("card__sample-text");
+  //   case "24":
+  //     // document.querySelector('.card__sample-text').style.fontSize = '240%';
 
-      for (var sampleText of sampleTexts) {
-        sampleText.style.fontSize = "240%";
-      }
-      break;
+  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
 
-    case "28":
-      // document.querySelector('.card__sample-text').style.fontSize = '280%';
+  //     for (var sampleText of sampleTexts) {
+  //       sampleText.style.fontSize = "240%";
+  //     }
+  //     break;
 
-      var sampleTexts = document.getElementsByClassName("card__sample-text");
+  //   case "28":
+  //     // document.querySelector('.card__sample-text').style.fontSize = '280%';
 
-      for (var sampleText of sampleTexts) {
-        sampleText.style.fontSize = "280%";
-      }
-      break;
+  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
 
-    case "32":
-      // document.querySelector('.card__sample-text').style.fontSize = '320%';
+  //     for (var sampleText of sampleTexts) {
+  //       sampleText.style.fontSize = "280%";
+  //     }
+  //     break;
 
-      var sampleTexts = document.getElementsByClassName("card__sample-text");
+  //   case "32":
+  //     // document.querySelector('.card__sample-text').style.fontSize = '320%';
 
-      for (var sampleText of sampleTexts) {
-        sampleText.style.fontSize = "320%";
-      }
-      break;
-  }
+  //     var sampleTexts = document.getElementsByClassName("card__sample-text");
+
+  //     for (var sampleText of sampleTexts) {
+  //       sampleText.style.fontSize = "320%";
+  //     }
+  //     break;
+  // }
 });
 
 //Initialization
